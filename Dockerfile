@@ -13,4 +13,9 @@ RUN apt-get update && apt-get install -y libsodium-dev unzip python cron supervi
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && cd /tmp && curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip" \
     && unzip awscli-bundle.zip && ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws \
-    && rm awscli-bundle.zip && rm -rf awscli-bundle
+    && rm awscli-bundle.zip && rm -rf awscli-bundle \
+	&& apt-get install -y libgmp-dev re2c libmhash-dev libmcrypt-dev file \
+    && ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/local/include/ \
+    && docker-php-ext-configure gmp \
+    && docker-php-ext-install gmp \
+	&& docker-php-ext-enable gmp
