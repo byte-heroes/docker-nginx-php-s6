@@ -17,5 +17,5 @@ RUN apt-get update && apt-get install -y libsodium-dev unzip python cron supervi
 	&& apt-get install -y libgmp-dev re2c libmhash-dev libmcrypt-dev file \
     && ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/local/include/ \
     && docker-php-ext-configure gmp \
-    && docker-php-ext-install gmp \
-	&& docker-php-ext-enable gmp bcmath
+    && docker-php-ext-install gmp bcmath \
+	&& docker-php-ext-enable gmp 
