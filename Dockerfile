@@ -18,4 +18,4 @@ RUN apt-get update && apt-get install -y libsodium-dev unzip python cron supervi
     && ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/local/include/ \
     && docker-php-ext-configure gmp \
     && docker-php-ext-install gmp \
-	&& docker-php-ext-enable gmp
+	&& docker-php-ext-enable gmp bcmath
