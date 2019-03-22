@@ -1,8 +1,8 @@
-# docker-php-fpm-laravel
-Dockerfile for the byteheroes/php-fpm-laravel image
+# docker-nginx-php-s6
+Dockerfile for the byteheroes/nginx-php-s6 image
 
-https://hub.docker.com/r/byteheroes/php-fpm-laravel/
+https://hub.docker.com/r/byteheroes/nginx-php-s6/
 
 ``` bash
-docker pull byteheroes/php-fpm-laravel
+docker pull byteheroes/nginx-php-s6
 ```
