@@ -75,3 +75,7 @@ RUN chmod 755 /etc/services.d/php_fpm/run
 # Copy CRON service script
 COPY ./docker/s6-overlay/start-cron.sh /etc/services.d/cron/run
 RUN chmod 755 /etc/services.d/cron/run
+
+# Copy QUEUE service script
+COPY ./docker/s6-overlay/start-queue.sh /etc/services.d/queue/run
+RUN chmod 755 /etc/services.d/queue/run
