@@ -17,7 +17,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV PHP_VERSION 7.3
 # Add ppa, curl and syslogd
 RUN apt-get update && apt-get install -y software-properties-common curl inetutils-syslogd && \
-    apt-get install systemd && \
+    apt-get install -y systemd && \
     apt-add-repository ppa:nginx/stable -y && \
     LC_ALL=C.UTF-8 apt-add-repository ppa:ondrej/php -y && \
     apt-get update && apt-get install -y --no-install-recommends \
