@@ -14,7 +14,7 @@ CMD []
 
 # Disable frontend dialogs
 ENV DEBIAN_FRONTEND noninteractive
-ENV PHP_VERSION 7.2
+ENV PHP_VERSION 7.3
 # Add ppa, curl and syslogd
 RUN apt-get update && apt-get install -y software-properties-common curl inetutils-syslogd && \
     apt-add-repository ppa:nginx/stable -y && \
@@ -59,7 +59,7 @@ RUN apt-get update && apt-get install -y software-properties-common curl inetuti
     sed -i 's#.*variables_order.*#variables_order=EGPCS#g' /etc/php/${PHP_VERSION}/fpm/php.ini && \
     sed -i 's#.*date.timezone.*#date.timezone=UTC#g' /etc/php/${PHP_VERSION}/fpm/pool.d/www.conf && \
     sed -i 's#.*clear_env.*#clear_env=no#g' /etc/php/${PHP_VERSION}/fpm/pool.d/www.conf && \
-    systemctl disable php7.2-fpm && \
+    systemctl disable php7.3-fpm && \
     systemctl disable nginx && \
     systemctl disable cron
 
