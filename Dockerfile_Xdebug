@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 
 MAINTAINER byte heroes GmbH <dev@herosphere.gg>
 
