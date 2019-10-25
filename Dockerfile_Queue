@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y software-properties-common curl inetuti
     apt-get -y install systemd && \
     apt-add-repository ppa:nginx/stable -y && \
     LC_ALL=C.UTF-8 apt-add-repository ppa:ondrej/php -y && \
-    apt-get update && apt-get install -y --no-install-recommends \
+    apt-get update && apt-get install -y --no-install-recommends -o Dpkg::Options::="--force-confdef" \
     php${PHP_VERSION}-fpm \
     php${PHP_VERSION}-curl \
     php${PHP_VERSION}-cli \
