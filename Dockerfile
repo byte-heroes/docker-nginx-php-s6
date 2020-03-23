@@ -46,6 +46,7 @@ RUN apt-get update && apt-get install -y software-properties-common curl inetuti
     awscli \
     mc \
     htop \
+    git \
     net-tools \
     wget \
     iputils-ping && \
