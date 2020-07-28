@@ -48,6 +48,7 @@ RUN apt-get update && apt-get install -y software-properties-common curl inetuti
     htop \
     git \
     net-tools \
+    x11-common \
     wget \
     iputils-ping && \
     apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* && \
