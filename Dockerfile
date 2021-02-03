@@ -42,7 +42,6 @@ RUN apt-get update && apt-get install -y software-properties-common curl inetuti
     zip \
     unzip \
     nginx \
-    composer \
     awscli \
     mc \
     htop \
@@ -65,6 +64,8 @@ RUN apt-get update && apt-get install -y software-properties-common curl inetuti
     systemctl disable php7.3-fpm && \
     systemctl disable nginx && \
     systemctl disable cron
+
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 
 # Copy NGINX service script
